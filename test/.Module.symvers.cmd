@@ -1,1 +1,0 @@
-savedcmd_/home/hwilcox/Documents/kernal_modules/test/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/hwilcox/Documents/kernal_modules/test/Module.symvers -T /home/hwilcox/Documents/kernal_modules/test/modules.order -i Module.symvers -e 
