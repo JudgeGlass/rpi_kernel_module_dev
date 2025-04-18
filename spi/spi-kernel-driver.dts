@@ -1,0 +1,27 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "raspberrypi,5-model-b";
+
+    fragment@0 {
+        target = <&spi0>;
+        __overlay__ {
+            status = "okay";
+
+            foo@0 {
+                compatible = "example,foo-spi";
+                reg = <0>; // Chip Select 0
+                spi-max-frequency = <16000000>;
+                reset-gpios = <&gpio 12 0>; 
+           };
+        };
+    };
+    fragment@2 {
+        target-path = "/soc/spi@7e204000/spidev@0";
+        __overlay__ {
+            status = "disabled";
+        };
+    };
+};
+
